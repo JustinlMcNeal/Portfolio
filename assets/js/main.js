@@ -298,6 +298,13 @@
 							location.hash = '';
 						});
 
+					$('<div class="back">&lt;</div>') // Using &lt; for '<' character
+					.appendTo($this)
+					.on('click', function () {
+						window.history.back(); // Go back to the previous page
+						});
+
+
 				// Prevent clicks from inside article from bubbling.
 					$this.on('click', function(event) {
 						event.stopPropagation();
@@ -399,3 +406,6 @@
 					});
 
 })(jQuery);
+function goBack() {
+    window.history.back();
+}
